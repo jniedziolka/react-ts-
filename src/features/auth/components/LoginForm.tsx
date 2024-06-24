@@ -8,6 +8,11 @@ export function LoginForm() {
 
   return (
     <div className="w-1/4">
+      {loginUserMutation.isError && (
+        <div role="alert" className="my-2 alert alert-error">
+          <span>Wrong credentials!</span>
+        </div>
+      )}
       <Form<LoginUserDTO>
         onSubmit={(data) => {
           loginUserMutation.mutate(data);
