@@ -1,6 +1,8 @@
 import { Navigate, Outlet } from 'react-router-dom';
 import { Layout } from '../components/Layout';
 import { LoadingRing } from '../components/Loading';
+import { Invoices } from '@/features/invoice/routes/Invoices';
+import { CreateInvoice } from '@/features/invoice/routes/CreateInvoice';
 
 function App() {
   return (
@@ -19,8 +21,12 @@ export const loadingProtectedRoutes = [
 
 export const protectedRoutes = [
   {
-    path: '/dashboard',
-    element: <div>Dashboard</div>,
+    path: '/invoices',
+    element: <Invoices />,
+  },
+  {
+    path: '/invoices/create',
+    element: <CreateInvoice />,
   },
 ];
 
@@ -34,7 +40,7 @@ export const protectedRouterRoutes = [
       })),
       {
         path: '*',
-        element: <Navigate to="/dashboard" />,
+        element: <Navigate to="/invoices" />,
       },
     ],
   },
