@@ -1,3 +1,5 @@
+import { InvoicesGrid } from '../components/InvoicesGrid';
+
 export function Invoices() {
-  return <div>Invoices</div>;
+  return <InvoicesGrid />;
 }

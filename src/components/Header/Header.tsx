@@ -9,7 +9,9 @@ export function Header() {
 
   return (
     <div className="py-4 px-6 navbar justify-between">
-      <h1 className="text-xl">Super App</h1>
+      <a className="btn btn-ghost text-xl" href="/">
+        Super App
+      </a>
       <div className="flex items-center text-md">
         <span>Hello, {user?.name}</span>
         <Button
